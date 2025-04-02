@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OMSaleRefund]">
+  <parameter name="tech" value="woocommerce"/>
+  <parameter name="prefix" value="ordermanagement.sale.refund."/>
+  <parameter name="testscenario" value="positive"/>
+  <test thread-count="5" name="OMSaleRefund(failed)">
+    <classes>
+      <class name="com.cybersource.test.woocommerce.OM">
+        <methods>
+          <include name="init"/>
+          <include name="executeOMSaleRefund" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.cybersource.test.woocommerce.OM -->
+    </classes>
+  </test> <!-- OMSaleRefund(failed) -->
+</suite> <!-- Failed suite [OMSaleRefund] -->

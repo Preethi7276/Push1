@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [CreditCardAllPositive]">
+  <parameter name="tech" value="woocommerce"/>
+  <parameter name="testscenario" value="positive"/>
+  <test thread-count="3" parallel="tests" name="CreditCardAuthAuthReversal(failed)">
+    <parameter name="userIndex" value="2"/>
+    <parameter name="prefix" value="credit.card.authReversal."/>
+    <classes>
+      <class name="com.cybersource.test.woocommerce.CreditCard">
+        <methods>
+          <include name="init"/>
+          <include name="executeAuthAuthReversal" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.cybersource.test.woocommerce.CreditCard -->
+    </classes>
+  </test> <!-- CreditCardAuthAuthReversal(failed) -->
+  <test thread-count="3" parallel="tests" name="CreditCardAuthCapture(failed)">
+    <parameter name="userIndex" value="3"/>
+    <parameter name="prefix" value="credit.card.capture."/>
+    <classes>
+      <class name="com.cybersource.test.woocommerce.CreditCard">
+        <methods>
+          <include name="init"/>
+          <include name="executeAuthCapture" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.cybersource.test.woocommerce.CreditCard -->
+    </classes>
+  </test> <!-- CreditCardAuthCapture(failed) -->
+  <test thread-count="3" parallel="tests" name="CreditCardAuthCapRefund(failed)">
+    <parameter name="userIndex" value="4"/>
+    <parameter name="prefix" value="credit.card.refund."/>
+    <classes>
+      <class name="com.cybersource.test.woocommerce.CreditCard">
+        <methods>
+          <include name="init"/>
+          <include name="executeAuthCapRefund" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.cybersource.test.woocommerce.CreditCard -->
+    </classes>
+  </test> <!-- CreditCardAuthCapRefund(failed) -->
+  <test thread-count="3" parallel="tests" name="CreditCardSale(failed)">
+    <parameter name="userIndex" value="5"/>
+    <parameter name="prefix" value="credit.card.sale."/>
+    <classes>
+      <class name="com.cybersource.test.woocommerce.CreditCard">
+        <methods>
+          <include name="executeSale" invocation-numbers="0"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.cybersource.test.woocommerce.CreditCard -->
+    </classes>
+  </test> <!-- CreditCardSale(failed) -->
+  <test thread-count="3" parallel="tests" name="CreditCardSaleRefund(failed)">
+    <parameter name="userIndex" value="6"/>
+    <parameter name="prefix" value="credit.card.sale.refund."/>
+    <classes>
+      <class name="com.cybersource.test.woocommerce.CreditCard">
+        <methods>
+          <include name="executeSaleRefund" invocation-numbers="0"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.cybersource.test.woocommerce.CreditCard -->
+    </classes>
+  </test> <!-- CreditCardSaleRefund(failed) -->
+  <test thread-count="3" parallel="tests" name="CreditCardAuth(failed)">
+    <parameter name="userIndex" value="1"/>
+    <parameter name="prefix" value="credit.card.auth."/>
+    <classes>
+      <class name="com.cybersource.test.woocommerce.CreditCard">
+        <methods>
+          <include name="executeAuth" invocation-numbers="0 1 2 3"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.cybersource.test.woocommerce.CreditCard -->
+    </classes>
+  </test> <!-- CreditCardAuth(failed) -->
+</suite> <!-- Failed suite [CreditCardAllPositive] -->

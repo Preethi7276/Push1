@@ -1,0 +1,20 @@
+<suite name="CreditCardNullInvalidScenario">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="credit.card.nullInvalidscenario." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="CreditCardNullInvalidScenario">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeNullInvalidScenarioCase" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>
+

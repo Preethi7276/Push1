@@ -1,0 +1,19 @@
+<suite name="VisaCheckoutAuthAuthReversal">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="visa.checkout.authReversal." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="VisaCheckoutAuthAuthReversal">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.VisaCheckout" />
+			<methods>
+				<include name="executeAuthAuthReversal" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

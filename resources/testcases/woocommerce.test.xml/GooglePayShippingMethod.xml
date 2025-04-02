@@ -1,0 +1,19 @@
+<suite name="GooglePayShippingMethod">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="google.pay.shippingmethod." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="GooglePayShippingMethod">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeShippingMethod" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

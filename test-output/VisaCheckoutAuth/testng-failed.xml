@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [VisaCheckoutAuth]">
+  <parameter name="tech" value="woocommerce"/>
+  <parameter name="prefix" value="visa.checkout.auth."/>
+  <parameter name="testscenario" value="positive"/>
+  <test thread-count="5" name="VisaCheckoutAuth(failed)">
+    <classes>
+      <class name="com.cybersource.test.woocommerce.VisaCheckout">
+        <methods>
+          <include name="init"/>
+          <include name="executeAuth" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.cybersource.test.woocommerce.VisaCheckout -->
+    </classes>
+  </test> <!-- VisaCheckoutAuth(failed) -->
+</suite> <!-- Failed suite [VisaCheckoutAuth] -->

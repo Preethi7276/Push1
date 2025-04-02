@@ -1,0 +1,19 @@
+<suite name="VisaCheckoutConfiguration">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="visa.checkout." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="VisaCheckoutConfiguration">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.VisaCheckout" />
+			<methods>
+				<include name="VisaCheckoutConfiguration" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

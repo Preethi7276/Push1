@@ -1,0 +1,19 @@
+<suite name="CreditCardDecisionManager">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="credit.card.decisionmanager." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="CreditCardDecisionManager">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeDecisionManager" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

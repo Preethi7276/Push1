@@ -1,0 +1,72 @@
+<suite name="CreditCardSanity">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners" />
+	</Listeners>
+   
+	<test name="CreditCardAuth">
+		<parameter name="prefix" value="credit.card.sanity.auth." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuth" />
+			</methods>
+		</classes>
+	</test>
+	
+	
+		<test name="CreditCardCaptue">
+		<parameter name="prefix" value="credit.card.sanity.capture." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuthCapture" />
+			</methods>
+		</classes>
+	</test>
+	
+	<test name="CreditCardSale">
+		<parameter name="prefix" value="credit.card.sanity.charge." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeSale" />
+			</methods>
+		</classes>
+	</test>
+	
+	<test name="CreditCardAuthAuthReversal">
+		<parameter name="prefix" value="credit.card.sanity.authReversal." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuthAuthReversal" />
+			</methods>
+		</classes>
+	</test>
+	
+	<test name="CreditCardAuthCapRefund">
+		<parameter name="prefix" value="credit.card.sanity.refund." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuthCapRefund" />
+			</methods>
+		</classes>
+	</test>
+	
+	<test name="CreditCardAuthCapParRefund">
+	    <parameter name="prefix" value="credit.card.sanity.authcapparref." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuthCapParRefund" />
+			</methods>
+		</classes>
+	</test> 
+
+
+
+</suite>

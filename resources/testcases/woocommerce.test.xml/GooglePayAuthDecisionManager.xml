@@ -1,0 +1,19 @@
+<suite name="GooglePayDecisionManager">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="google.pay.decisionmanager." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="GooglePayDecisionManager">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeDecisionManager" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

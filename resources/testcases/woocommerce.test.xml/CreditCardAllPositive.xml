@@ -1,0 +1,137 @@
+<suite name="CreditCardAllAuthCases" parallel="tests" thread-count="3">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="testscenario" value="positive" />
+
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners" />
+	</Listeners>
+  <!--   
+	<test name="CreditCardConfiguration">
+		<parameter name="prefix" value="credit.card." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="CreditCardConfiguration" />
+			</methods>
+		</classes>
+	</test>
+	-->
+	
+	<test name="CreditCardAuth">
+		<parameter name="prefix" value="credit.card.auth." />
+		<parameter name="userIndex" value="3" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuth" />
+			</methods>
+		</classes>
+	</test>
+	
+	<test name="CreditCardAuthAuthReversal">
+		<parameter name="prefix" value="credit.card.authReversal." />
+		<parameter name="userIndex" value="2" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuthAuthReversal" />
+			</methods>
+		</classes>
+	</test>
+
+	<test name="CreditCardAuthCapture">
+		<parameter name="prefix" value="credit.card.capture." />
+		<parameter name="userIndex" value="3" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuthCapture" />
+			</methods>
+		</classes>
+	</test>
+	<!--  
+	<test name="CreditCardAuthCapRefund">
+		<parameter name="prefix" value="credit.card.refund." />
+		<parameter name="userIndex" value="4" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuthCapRefund" />
+			</methods>
+		</classes>
+	</test>
+	-->
+<!--  
+	<test name="CreditCardAddCard">
+		<parameter name="prefix" value="credit.card.myaccount.add.card." />
+		<parameter name="userIndex" value="5" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeMyAccountAddCard" />
+			</methods>
+		</classes>
+	</test>
+	<test name="CreditCardDeleteCard">
+		<parameter name="prefix"
+			value="credit.card.myaccount.delete.card." />
+			<parameter name="userIndex" value="6" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeMyAccountDeleteCard" />
+			</methods>
+		</classes>
+	</test>
+	-->
+		
+<!--  
+	<test name="CreditCardSale">
+		<parameter name="prefix" value="credit.card.sale." />
+		<parameter name="userIndex" value="5" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeSale" />
+			</methods>
+		</classes>
+	</test>
+	-->
+	<!--  
+	<test name="CreditCardSaleRefund">
+		<parameter name="prefix" value="credit.card.sale.refund." />
+		<parameter name="userIndex" value="8" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeSaleRefund" />
+			</methods>
+		</classes>
+	</test>
+	-->
+
+	<!--  
+	<test name="CreditCardSaleDecisionManager">
+	<parameter name="userIndex" value="6" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			
+			<methods>
+				<include name="executeDecisionManager" />
+			</methods>
+		</classes>
+	</test> 
+	
+	<test name="CreditCardDecisionManager">
+	<parameter name="userIndex" value="7" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeDecisionManager" />
+			</methods>
+		</classes>
+	</test> 
+	-->
+
+
+</suite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [CreditCardAuth]">
+  <parameter name="tech" value="woocommerce"/>
+  <parameter name="prefix" value="credit.card.auth."/>
+  <parameter name="testscenario" value="positive"/>
+  <test thread-count="5" name="CreditCardAuth(failed)">
+    <classes>
+      <class name="com.cybersource.test.woocommerce.CreditCard">
+        <methods>
+          <include name="executeAuth" invocation-numbers="0"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.cybersource.test.woocommerce.CreditCard -->
+    </classes>
+  </test> <!-- CreditCardAuth(failed) -->
+</suite> <!-- Failed suite [CreditCardAuth] -->

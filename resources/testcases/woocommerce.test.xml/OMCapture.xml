@@ -1,0 +1,19 @@
+<suite name="CreditCardAuthCapture">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="ordermanagement.capture." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="OMAuthCapture">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.OM" />
+			<methods>
+				<include name="executeOMAuthCapture" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

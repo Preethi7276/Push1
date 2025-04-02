@@ -1,0 +1,19 @@
+<suite name="CreditCardPayerAuth">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="credit.card.payer.auth." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="CreditCardPayerAuth">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executePayerAuth" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

@@ -1,0 +1,19 @@
+<suite name="CreditCardShippingMethod">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="credit.card.shippingmethod." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="CreditCardShippingMethod">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeShippingMethod" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

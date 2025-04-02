@@ -1,0 +1,46 @@
+<suite name="CreditCardAllSaleCases" parallel="tests"
+	thread-count="3">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="testscenario" value="positive" />
+
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners" />
+	</Listeners>
+	<test name="CreditCardSale">
+		<parameter name="prefix" value="credit.card.sale." />
+		<parameter name="userIndex" value="1" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeSale" />
+			</methods>
+		</classes>
+	</test>
+	<test name="CreditCardSaleRefund">
+		<parameter name="prefix" value="credit.card.sale.refund." />
+		<parameter name="userIndex" value="2" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeSaleRefund" />
+			</methods>
+		</classes>
+	</test>
+	<test name="CreditCardSaleParRefund">
+	    <parameter name="prefix" value="credit.card.saleparref." />
+	    <parameter name="userIndex" value="3" />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeSaleParRefund" />
+			</methods>
+		</classes>
+	</test> 	
+	<!-- <test name="CreditCardSaleDecisionManager"> <parameter name="prefix" 
+		value="credit.card.sale.decisionmanager." /> <parameter name="userIndex" 
+		value="3" /> <classes> <class name="com.cybersource.test.woocommerce.CreditCard" 
+		/> <methods> <include name="executeDecisionManager" /> </methods> </classes> 
+		</test> -->
+
+
+</suite>

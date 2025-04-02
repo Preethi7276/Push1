@@ -1,0 +1,19 @@
+<suite name="OMAuthAuthReversal">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="ordermanagement.AuthReversal." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="OMAuthAuthReversal">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.OM" />
+			<methods>
+				<include name="executeOMAuthAuthReversal" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

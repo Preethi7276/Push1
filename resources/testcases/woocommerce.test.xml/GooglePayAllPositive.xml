@@ -1,0 +1,150 @@
+<suite name="GooglePayAllPositive">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="testscenario" value="positive" />
+
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners" />
+	</Listeners>
+	<test name="GooglePayConfiguration"> <parameter name="prefix" value="google.pay." /> 
+	<classes> 
+	<class name="com.cybersource.test.woocommerce.GooglePay" /> 
+		<methods> <include name="GooglePayConfiguration" /> 
+		</methods> 
+	</classes> 
+	</test>
+	<test name="GooglePayAuth">
+		<parameter name="prefix" value="google.pay.auth." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeAuth" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePayAuthAuthReversal">
+		<parameter name="prefix" value="google.pay.authReversal." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeAuthAuthReversal" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePayAuthCapRefund">
+		<parameter name="prefix" value="google.pay.refund." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeAuthCapRefund" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePayAuthCapRefund">
+	    <parameter name="prefix" value="google.pay.authcapparref." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeAuthCapRefund" />
+			</methods>
+		</classes>
+	</test> 	
+	<test name="GooglePayAuthCapture">
+		<parameter name="prefix" value="google.pay.capture." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeAuthCapture" />
+			</methods>
+		</classes>
+	</test>
+	<!-- <test name="GooglePayDecisionManager"> <classes> <class name="com.cybersource.test.woocommerce.GooglePay" 
+		/> <methods> <include name="executeDecisionManager" /> </methods> </classes> 
+		</test> -->
+	<test name="GooglePayCoupons">
+		<parameter name="prefix" value="google.pay.coupon." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeCoupons" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePayDiffCurrencyandCountry">
+		<parameter name="prefix"
+			value="google.pay.diffcurrenciesandcountries." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeDiffCurrencies" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePayNullInvalidScenario">
+		<parameter name="prefix"
+			value="google.pay.nullInvalidscenario." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="nullInvalidScenarioCase" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePayShippingMethod">
+		<parameter name="prefix" value="google.pay.shippingmethod." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeShippingMethod" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePayTaxes">
+		<parameter name="prefix" value="google.pay.tax." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeTaxes" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePaySale">
+		<parameter name="prefix" value="google.pay.sale." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeSale" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePaySaleRefund">
+		<parameter name="prefix" value="google.pay.sale.refund." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeSaleRefund" />
+			</methods>
+		</classes>
+	</test>
+	<test name="GooglePaySaleParRefund">
+	    <parameter name="prefix" value="google.pay.saleparref." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeSaleParRefund" />
+			</methods>
+		</classes>
+	</test> 
+	<!--  	
+	<test name="GooglePaySaleDecisionManager">
+		<parameter name="prefix"
+			value="google.pay.sale.decisionmanager." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.GooglePay" />
+			<methods>
+				<include name="executeDecisionManager" />
+			</methods>
+		</classes>
+	</test>
+	-->
+
+</suite>

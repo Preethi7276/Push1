@@ -1,0 +1,19 @@
+<suite name="VisaCheckoutAuth">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="visa.checkout.decisionmanager." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="VisaCheckoutDecisionManager">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.VisaCheckout" />
+			<methods>
+				<include name="executeDecisionManager" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

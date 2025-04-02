@@ -1,0 +1,30 @@
+<suite name="CreditCardZeroDollarAuth">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="testscenario" value="positive" />
+
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners" />
+	</Listeners>
+	<test name="CreditCardAddCard">
+		<parameter name="prefix"
+			value="credit.card.myaccount.add.card." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeMyAccountAddCard" />
+			</methods>
+		</classes>
+	</test>
+
+	<test name="CreditCardDeleteCard">
+		<parameter name="prefix"
+			value="credit.card.myaccount.delete.card." />
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeMyAccountDeleteCard" />
+			</methods>
+		</classes>
+	</test>
+
+</suite>

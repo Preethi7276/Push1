@@ -1,0 +1,19 @@
+<suite name="CreditCardSaleRefund">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="credit.card.sale.refund." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="CreditCardSaleRefund">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeSaleRefund" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

@@ -1,0 +1,19 @@
+<suite name="CreditCardAuthCapture">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="credit.card.capture." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="CreditCardAuthCapture">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.CreditCard" />
+			<methods>
+				<include name="executeAuthCapture" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

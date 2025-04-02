@@ -1,0 +1,19 @@
+<suite name="OMSaleRefund">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="ordermanagement.sale.refund." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="OMSaleRefund">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.OM" />
+			<methods>
+				<include name="executeOMSaleRefund" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

@@ -1,0 +1,19 @@
+<suite name="VisaCheckoutAuthCapture">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="visa.checkout.capture." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="VisaCheckoutAuthCapture">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.VisaCheckout" />
+			<methods>
+				<include name="executeAuthCapture" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>

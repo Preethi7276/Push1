@@ -1,0 +1,19 @@
+<suite name="VisaCheckoutSaleRefund">
+	<parameter name="tech" value="woocommerce" />
+	<parameter name="prefix" value="visa.checkout.sale.refund." />
+	<parameter name="testscenario" value="positive" />
+	
+	<Listeners>
+		<Listener class-name="com.cybersource.test.util.Listeners"/>
+	</Listeners>
+		
+	<test name="VisaCheckoutSaleRefund">
+		<classes>
+			<class name="com.cybersource.test.woocommerce.VisaCheckout" />
+			<methods>
+				<include name="executeSaleRefund" />
+			</methods>
+		</classes>
+	</test> 		
+			 
+</suite>
